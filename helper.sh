@@ -1,7 +1,9 @@
 #!/bin/bash
 clear
 echo ==============================
+sleep 2
 echo  Checking root privileges...
+sleep 2
 echo ==============================
 echo
 if [[ $UID == 0 ]]; then
@@ -10,13 +12,18 @@ if [[ $UID == 0 ]]; then
 	exit 1
 fi
 echo
+echo
 echo ===============
+sleep 2
 echo Updating pacman 
+sleep 2
 echo ===============
 sudo pacman -Syyu
 clear
 echo ===============
+sleep 2
 echo Orphans package
+sleep 2
 echo ===============
 orphans=$(sudo pacman -Qdt)
 echo
@@ -29,15 +36,18 @@ else
 	echo  Remove Orphan package
 	echo =================
 	sudo pacman -Rsn $(sudo pacman -Qdtq)
-fi	
-echo
-echo =============================
-read -e -p "Updating AUR repo " -i "Y" REPLY
-echo =============================
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-	aurman -Syyu
 fi
 clear
-echo UPPA SUCCESSFULLY TERMINATED !
+echo
+echo =============================
+sleep 2
+echo "Updating AUR repo "
+sleep 2
+echo =============================
+#echo
+#if [[ $REPLY =~ ^[Yy]$ ]]
+#then
+	aurman -Syyu
+#fi
+clear
+echo SUCCESSFULLY TERMINATED !
