@@ -6,6 +6,14 @@ sleep 1
 echo  Checking root privileges...
 sleep 1
 
+#checking script dependencies
+clear
+sleep 1
+echo Checking script dependencies...
+sleep 1
+
+command -v aurman >/dev/null 2>&1 || { echo >&2 "I require aurman but it's not installed.Aborting."; exit 1;}
+
 #checking root privileges
 if [[ $UID == 0 ]]; then
 	echo "Please run this script WITHOUT sudo !"
@@ -14,6 +22,7 @@ if [[ $UID == 0 ]]; then
 fi
 
 #updating pacman database
+clear
 sleep 1
 echo Updating pacman database...
 sleep 1
