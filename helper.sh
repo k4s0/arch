@@ -1,53 +1,56 @@
 #!/bin/bash
 clear
-echo ==============================
-sleep 2
+
+#printing info
+sleep 1
 echo  Checking root privileges...
-sleep 2
-echo ==============================
-echo
+sleep 1
+
+#checking root privileges
 if [[ $UID == 0 ]]; then
-	echo "Please run this script WITHOUT sudo:"
+	echo "Please run this script WITHOUT sudo !"
 	echo "$0 $*"
 	exit 1
 fi
-echo
-echo
-echo ===============
-sleep 2
-echo Updating pacman 
-sleep 2
-echo ===============
+
+#updating pacman database
+sleep 1
+echo Updating pacman database...
+sleep 1
 sudo pacman -Syyu
+
+#checking for orphans package
 clear
-echo ===============
-sleep 2
-echo Orphans package
-sleep 2
-echo ===============
+
+sleep 1
+echo Checking for orphans package...
+sleep 1
 orphans=$(sudo pacman -Qdt)
-echo
-echo
 if [ -z "$orphans" ]
 then
-	echo No Oprhan package found
+	sleep 1
+	echo No oprhan package found !
+	sleep 1
 else
-	echo =================
-	echo  Remove Orphan package
-	echo =================
+	sleep 1
+	echo  Removing orphan package...
+	sleep 1
 	sudo pacman -Rsn $(sudo pacman -Qdtq)
 fi
+
+#updating aur database
 clear
-echo
-echo =============================
-sleep 2
-echo "Updating AUR repo "
-sleep 2
-echo =============================
-#echo
-#if [[ $REPLY =~ ^[Yy]$ ]]
-#then
-	aurman -Syyu
-#fi
+
+sleep 1
+echo "Updating AUR repo database..."
+sleep 1
+aurman -Syyu
+
+#printing finish info
 clear
-echo SUCCESSFULLY TERMINATED !
+
+echo "============================="
+echo "==                         =="
+echo "== SUCCESSFULLY TERMINATED =="
+echo "==                         =="
+echo "============================="
