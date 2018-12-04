@@ -12,7 +12,7 @@ sleep 1
 echo Checking script dependencies...
 sleep 1
 
-command -v yay >/dev/null 2>&1 || { echo >&2 "I require yay but it's not installed.Aborting."; exit 1;}
+command -v yay >/dev/null 2>&1 || { echo >&2 "I require yay but it's not installed. Aborting."; exit 1;}
 
 #checking root privileges
 if [[ $UID == 0 ]]; then

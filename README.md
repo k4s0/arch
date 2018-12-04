@@ -28,7 +28,32 @@ For intel processors with grub boot loader:
 
 For AMD processors install linux-firmware package.
 
-#### 3. Disable GRUB delay
+#### 3. Install TLP power management system
+
+`pacman -S tlp tlp-rdw`
+
+**ThinkPads require an additional**:
+
+`pacman -S tp_smapi acpi_call`
+
+**ThinkPad notes:**
+Refer to "Which kernel module?" for details
+You must disable Secure Boot to use the ThinkPad specific packages Service Units
+To complete the installation you must enable TLP's services:
+
+`systemctl enable tlp.service`
+`systemctl enable tlp-sleep.service`
+
+Using the Radio Device Wizard (tlp-rdw) requires an additional service:
+
+`systemctl enable NetworkManager-dispatcher.service`
+
+You should also mask the following services to avoid conflicts and assure proper operation of TLP's radio device switching options:
+
+`systemctl mask systemd-rfkill.service`
+`systemctl mask systemd-rfkill.socket`
+
+#### 4. Disable GRUB delay
 
 Add the following to `/etc/default/grub`
 
@@ -44,7 +69,7 @@ Make it executable, and regenerate the grub configuration:
 `sudo chmod a+x /etc/grub.d/31_hold_shift`
 `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
-#### 4. Set up firewall
+#### 5. Set up firewall
 
 Install ufw -> `sudo pacman -S ufw`
 
@@ -57,7 +82,7 @@ Enable the start-up with the system ->
 
 Reboot and check the status again. It should be active.
 
-#### 5. Encrypt your home directory
+#### 6. Encrypt your home directory
 
 Logged out. Switch to a console with Ctrl+Alt+F2. Login as a root and check that your user own no processes:
 `ps -U username` 
@@ -90,13 +115,11 @@ After the line `session required pam_unix.so` add:
 
 Reboot and make sure that you can login to your desktop
 
-#### 6. Remove orphans
+#### 7. Remove orphans
 
 `sudo pacman -Rns $(pacman -Qtdq)`
 
-#### 7. Optimize pacman's database access speeds
-
-`sudo pacman-optimize`
+#### EXTRA TIPS
 
 **Check for errors**
 
