@@ -1,9 +1,14 @@
 # arch-helper
+<p align="center">
+        <img src="https://img.shields.io/badge/Version-0.2-blue.svg">
+        <img src="https://img.shields.io/badge/License-GPLv3-yellow.svg">
+        <img src="https://img.shields.io/badge/Status-Alpha-red.svg">
+</p>
 
 Simple pacman &amp; yay helperù
 ## ArchLinux Configuration
 
-#### 1. Install LTS kernel
+### 1. Install LTS kernel
 
 I also recommend to watch the detailed video "Why and How to install the LTS kernel"      https://youtu.be/b-H3jURTgqk
 
@@ -20,7 +25,7 @@ Reboot and check which kernel is in use with `uname -r`.
 Remove non-lts kernel
 `sudo pacman -Rs linux`
 
-#### 2. Install Microcode
+### 2. Install Microcode
 
 For intel processors with grub boot loader:
 `sudo pacman -S intel-ucode`
@@ -28,7 +33,7 @@ For intel processors with grub boot loader:
 
 For AMD processors install linux-firmware package.
 
-#### 3. Install TLP power management system
+### 3. Install TLP power management system
 
 `pacman -S tlp tlp-rdw`
 
@@ -53,7 +58,7 @@ You should also mask the following services to avoid conflicts and assure proper
 `systemctl mask systemd-rfkill.service`
 `systemctl mask systemd-rfkill.socket`
 
-#### 4. Disable GRUB delay
+### 4. Disable GRUB delay
 
 Add the following to `/etc/default/grub`
 
@@ -69,7 +74,7 @@ Make it executable, and regenerate the grub configuration:
 `sudo chmod a+x /etc/grub.d/31_hold_shift`
 `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
-#### 5. Set up firewall
+### 5. Set up firewall
 
 Install ufw -> `sudo pacman -S ufw`
 
@@ -82,7 +87,7 @@ Enable the start-up with the system ->
 
 Reboot and check the status again. It should be active.
 
-#### 6. Encrypt your home directory
+### 6. Encrypt your home directory
 
 Logged out. Switch to a console with Ctrl+Alt+F2. Login as a root and check that your user own no processes:
 `ps -U username` 
@@ -115,11 +120,11 @@ After the line `session required pam_unix.so` add:
 
 Reboot and make sure that you can login to your desktop
 
-#### 7. Remove orphans
+### 7. Remove orphans
 
 `sudo pacman -Rns $(pacman -Qtdq)`
 
-#### EXTRA TIPS
+### EXTRA TIPS
 
 **Check for errors**
 
@@ -128,4 +133,4 @@ Reboot and make sure that you can login to your desktop
 
 **Backup the system**
 
-sudo rsync -aAXvP --delete --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/mnt/* --exclude=/media/* --exclude=/lost+found --exclude=/home/.ecryptfs / /mnt/backupDestination/
+`sudo rsync -aAXvP --delete --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/mnt/* --exclude=/media/* --exclude=/lost+found --exclude=/home/.ecryptfs / /mnt/backupDestination/`
