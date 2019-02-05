@@ -5,7 +5,8 @@
         <img src="https://img.shields.io/badge/Status-Alpha-red.svg">
 </p>
 
-Simple pacman &amp; yay helperù
+Simple pacman &amp; yay helper
+Thanks to Avarage Linux User for original guide, checkout his website-> http://averagelinuxuser.com/10-things-to-do-first-in-arch-linux/
 ## ArchLinux Configuration
 
 ### 1. Install LTS kernel
