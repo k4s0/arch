@@ -1,12 +1,11 @@
-# arch-helper
+# arch-helper Simple pacman &amp; yay helper
 <p align="center">
         <img src="https://img.shields.io/badge/Version-0.2-blue.svg">
         <img src="https://img.shields.io/badge/License-GPLv3-yellow.svg">
         <img src="https://img.shields.io/badge/Status-Alpha-red.svg">
 </p>
 
-Simple pacman &amp; yay helper
-<br>Thanks to Avarage Linux User for original guide, checkout his website => http://averagelinuxuser.com/10-things-to-do-first-in-arch-linux/
+Thanks to Avarage Linux User for original guide, checkout his website => http://averagelinuxuser.com/10-things-to-do-first-in-arch-linux/
 ## ArchLinux Configuration
 
 ### 1. Install LTS kernel
