@@ -1,4 +1,4 @@
-# Personal ArchLinux configuration and some Tips&Tricks
+# Personal ArchLinux Configuration
 <p align="center">
         <img src="https://img.shields.io/badge/Version-0.1-blue.svg">
         <img src="https://img.shields.io/badge/License-GPLv3-yellow.svg">
@@ -17,10 +17,6 @@ For AMD processors install linux-firmware package.
 ### 2. Install TLP power management system
 
 `pacman -S tlp tlp-rdw`
-
-**ThinkPads require an additional**:
-
-`pacman -S tp_smapi acpi_call`
 
 To complete the installation you must enable TLP's services:
 
