@@ -90,7 +90,7 @@ set_pywal(){
     if [[ "$(ls /usr/share/pixmaps/back.jpg 2>/dev/null)" ]];then
         wal -i /usr/share/pixmaps/back.jpg
     else
-        wget "https://gitlab.com/terminalroot/arch/raw/master/back.jpg" -O ~/wallpaper.jpg 2>/dev/null
+        wget "https://raw.githubusercontent.com/k4s0/arch/master/cs-wallpaper.jpg" -O ~/wallpaper.jpg 2>/dev/null
         wal -i ~/wallpaper.jpg
     fi
     #echo '(cat ~/.cache/wal/sequences &)' >> /home/$USER/.bashrc

@@ -9,17 +9,10 @@
 For intel processors with grub boot loader:
 `sudo pacman -S intel-ucode`
 `sudo grub-mkconfig -o /boot/grub/grub.cfg`
-For AMD processors install linux-firmware package.
-
-### 2. Install Microcode
-
-For intel processors with grub boot loader:
-`sudo pacman -S intel-ucode`
-`sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
 For AMD processors install linux-firmware package.
 
-### 3. Install TLP power management system
+### 2. Install TLP power management system
 
 `pacman -S tlp tlp-rdw`
 
@@ -44,7 +37,7 @@ You should also mask the following services to avoid conflicts and assure proper
 `systemctl mask systemd-rfkill.service`
 `systemctl mask systemd-rfkill.socket`
 
-### 4. Disable GRUB delay
+### 3. Disable GRUB delay
 
 Add the following to `/etc/default/grub`
 
@@ -60,7 +53,7 @@ Make it executable, and regenerate the grub configuration:
 `sudo chmod a+x /etc/grub.d/31_hold_shift`
 `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
-### 5. Remove orphans
+### 4. Remove orphans
 
 `sudo pacman -Rns $(pacman -Qtdq)`
 
