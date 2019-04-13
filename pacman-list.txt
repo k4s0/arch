@@ -8,6 +8,7 @@ bleachbit
 blueman
 bluez
 bluez-utils
+breeze-icons
 bzip2
 chromium
 cmake
@@ -34,6 +35,7 @@ gcc-libs
 gettext
 gimp
 git
+gitkraken
 glibc
 gparted
 grep
@@ -45,6 +47,7 @@ gwenview
 gzip
 handbrake
 htop
+human-icon-theme
 i3-gaps
 i3blocks
 i3lock
@@ -54,6 +57,7 @@ inetutils
 intel-ucode
 iproute2
 iputils
+jdk8-openjdk
 jfsutils
 jsoncpp
 less
@@ -68,6 +72,7 @@ linux-zen
 linux-zen-headers
 logrotate
 lvm2
+lxappearance
 m4
 man-db
 man-pages
@@ -77,15 +82,21 @@ mpv
 nano
 nautilus
 netctl
+netmenu
 network-manager-applet
 networkmanager
 nitrogen
+ntfs-3g
 openssh
+p7zip-gui
 pacman
+pamac-aur
 pavucontrol
 pciutils
 perl
 php
+phpstorm
+polybar
 powerline-fonts
 procps-ng
 psmisc
@@ -102,15 +113,18 @@ screen
 screenfetch
 sed
 shadow
+spotify
 sudo
 sysfsutils
 systemd-sysvcompat
 tar
+telegram-desktop
 termite
 texinfo
 tlp
 tlp-rdw
 transmission-gtk
+trello
 ttf-dejavu
 unzip
 usbutils
@@ -119,6 +133,7 @@ vi
 vim
 virtualbox
 wget
+whatsapp-nativefier
 which
 wireless_tools
 wpa_supplicant
@@ -164,3 +179,4 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+yay

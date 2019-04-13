@@ -58,6 +58,10 @@ Make it executable, and regenerate the grub configuration:
 
 ### EXTRA TIPS
 
+**Export Pacman Package List**
+
+` pacman -Qqe > pacman-list.txt `
+
 **Check for errors**
 
 `sudo systemctl --failed`
