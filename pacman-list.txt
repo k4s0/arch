@@ -1,4 +1,5 @@
 alsa-utils
+android-file-transfer
 ark
 autoconf
 automake
@@ -12,9 +13,13 @@ breeze-icons
 bzip2
 chromium
 cmake
+code
+composer
 coreutils
 cpupower
 cryptsetup
+debtap
+deepin-screenshot
 device-mapper
 dhcpcd
 dialog
@@ -22,6 +27,7 @@ diffutils
 dmenu
 e2fsprogs
 efibootmgr
+etcher-bin
 evince
 fakeroot
 feh
@@ -30,6 +36,7 @@ filesystem
 filezilla
 findutils
 flex
+freemind
 gawk
 gcc-libs
 gettext
@@ -37,6 +44,7 @@ gimp
 git
 gitkraken
 glibc
+google-earth-pro
 gparted
 grep
 grub
@@ -86,6 +94,8 @@ netmenu
 network-manager-applet
 networkmanager
 nitrogen
+nodejs
+npm
 ntfs-3g
 openssh
 p7zip-gui
@@ -98,11 +108,13 @@ php
 phpstorm
 polybar
 powerline-fonts
+prink-ppd-files-prbaa
 procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
+putty
 python
 python-pip
 qgis
@@ -113,6 +125,8 @@ screen
 screenfetch
 sed
 shadow
+shotgun
+skypeforlinux-preview-bin
 spotify
 sudo
 sysfsutils
@@ -120,6 +134,7 @@ systemd-sysvcompat
 tar
 telegram-desktop
 termite
+testdisk
 texinfo
 tlp
 tlp-rdw
@@ -179,4 +194,5 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+yarn
 yay
