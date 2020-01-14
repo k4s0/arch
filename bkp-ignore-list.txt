@@ -1,7 +1,8 @@
-.b*
-.c*
+.bash*
+.cache
+.config
 .d*
-.f*
+.fehbg
 .g*
 .i*
 .java
@@ -11,8 +12,8 @@
 .PhpStorm*
 .p*
 .s*
-.urxvt
+.u*
 .v*
 .w3m
-.X*
 .x*
+.X*

@@ -142,7 +142,6 @@ manjaro-hello
 manjaro-hotfixes
 manjaro-i3-settings
 manjaro-printer
-manjaro-ranger-settings
 manjaro-release
 manjaro-settings-manager-notifier
 manjaro-system
@@ -183,7 +182,6 @@ openssh
 os-prober
 p7zip
 pacman
-palemoon-bin
 pamac-gtk
 pantheon-screenshot
 patch
